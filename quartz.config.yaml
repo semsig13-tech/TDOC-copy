@@ -206,13 +206,10 @@ plugins:
     layout:
       position: afterBody
       priority: 10
-  - source: "@quartz-community/footer"
+ - source: "@quartz-community/footer"
+    enabled: false
+  - source: "custom/footer"
     enabled: true
-    options:
-      links:
-        tavrida.ru: https://www.tavrida.ru/ter/
-        VK: https://vk.ru/tavrida_electric
-        MAX: https://max.ru/id7714418269_biz
     layout:
       position: footer
       priority: 50
