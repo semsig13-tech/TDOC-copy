@@ -14,6 +14,7 @@
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
+    "build": "npm run install-plugins && npx quartz build",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
@@ -27,8 +28,6 @@
   },
   "keywords": [
     "site generator",
-    "ssg",
-    "digital-garden",
     "markdown",
     "blog",
     "quartz"
