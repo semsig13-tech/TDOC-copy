@@ -209,8 +209,8 @@ plugins:
       position: afterBody
       priority: 10
   - source: "@quartz-community/footer"
-    enabled: false
-  - source: "github:semsig13-tech/TDOC-footer#main"
+    enabled: false 
+  - source: github:semsig13-tech/TDOC-footer
     enabled: true
     layout:
       position: footer
