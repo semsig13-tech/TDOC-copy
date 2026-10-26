@@ -210,11 +210,10 @@ plugins:
       priority: 10
   - source: "@quartz-community/footer"
     enabled: false
-  - source: "custom/footer"
+  - source: github:semsig13-tech/TDOC-footer
     enabled: true
     layout:
       position: footer
-      priority: 50
   - source: "@quartz-community/recent-notes"
     enabled: false
   - source: "@quartz-community/spacer"
