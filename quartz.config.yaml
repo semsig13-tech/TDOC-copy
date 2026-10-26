@@ -210,7 +210,7 @@ plugins:
       priority: 10
   - source: "@quartz-community/footer"
     enabled: false
-  - source: github:semsig13-tech/TDOC-footer
+  - source: "github:semsig13-tech/TDOC-footer#main"
     enabled: true
     layout:
       position: footer
@@ -275,7 +275,7 @@ plugins:
       position: afterBody
       priority: 50
       display: all
-  - source: github:vazome/quartz-image-zoom
+  - source: "github:vazome/quartz-image-zoom"
     enabled: true
 layout:
   groups:
