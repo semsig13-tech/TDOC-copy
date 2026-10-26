@@ -1,22 +1,24 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: TDOC
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
+  locale: ru-RU
   baseUrl: semsig13-tech.github.io/TDOC-copy
   ignorePatterns:
     - private
     - templates
     - .obsidian
+    - "*.trash"
+    - ".trash/**"
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
+      header: Source Sans Pro
       body: Source Sans Pro
       code: IBM Plex Mono
     colors:
@@ -69,7 +71,7 @@ plugins:
     order: 40
   - source: "@quartz-community/table-of-contents"
     enabled: true
-    order: 50
+    order: 100
     layout:
       position: right
       priority: 30
@@ -100,6 +102,11 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    options:
+      title: "Source Sans Pro"
+      header: "Source Sans Pro"
+      body: "Source Sans Pro"
+      code: "IBM Plex Mono"
   - source: "@quartz-themes/core"
     enabled: false
     options:
@@ -136,7 +143,7 @@ plugins:
       position: left
       priority: 50
   - source: "@quartz-community/graph"
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 10
@@ -187,6 +194,8 @@ plugins:
       group: toolbar
   - source: "@quartz-community/breadcrumbs"
     enabled: true
+    options:
+      rootName: "Домашняя страница"
     layout:
       position: beforeBody
       priority: 5
@@ -200,11 +209,9 @@ plugins:
       position: afterBody
       priority: 10
   - source: "@quartz-community/footer"
+    enabled: false
+  - source: "custom/footer"
     enabled: true
-    options:
-      links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
     layout:
       position: footer
       priority: 50
@@ -257,6 +264,8 @@ plugins:
       position: afterBody
       priority: 50
       display: all
+  - source: github:vazome/quartz-image-zoom
+    enabled: true
 layout:
   groups:
     toolbar:
