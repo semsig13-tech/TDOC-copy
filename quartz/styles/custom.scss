@@ -1,3 +1,278 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ============================================================================
+// Отображение всех границ в таблицах
+// ============================================================================
+
+table {
+  border-collapse: collapse;
+  border: 1px solid var(--gray);
+
+  th, td {
+    border: 1px solid var(--gray);
+  }
+
+  th {
+    border-color: var(--gray);
+  }
+
+  // Границы между всеми ячейками
+  & tbody {
+    td {
+      border-right: 1px solid var(--gray);
+      &:last-child {
+        border-right: 1px solid var(--gray);
+      }
+    }
+    tr:last-child td {
+      border-bottom: 1px solid var(--gray);
+    }
+  }
+
+  // Полная строка заголовка с границами
+  & thead {
+    th {
+      border-right: 1px solid var(--gray);
+      border-bottom: 2px solid var(--gray);
+      &:last-child {
+        border-right: 1px solid var(--gray);
+      }
+    }
+  }
+}
+
+// Таблица-контейнер с корректным отображением границ
+.table-container > table {
+  border: 1px solid var(--gray);
+  th {
+    border: 1px solid var(--gray);
+  }
+  td {
+    border: 1px solid var(--gray);
+  }
+  tr:last-child td {
+    border-bottom: 1px solid var(--gray);
+  }
+}
+
+// ============================================================================
+// Центрирование таблиц
+// ============================================================================
+
+// Контейнер оставляем блочным со скроллом — flex здесь нельзя, иначе таблица ломает расчёт ширины и вылезает за края.
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+// Центрируем саму таблицу внутри контейнера. Когда таблица уже контейнера — встаёт по центру, когда шире — появляется горизонтальный скролл.
+.table-container > table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Резервное правило для таблиц без .table-container
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ============================================================================
+// Цвета цитат, ссылок, крошек, проводника, оглавления, обратных ссылок
+// ============================================================================
+
+// Цвет полосы цитаты (blockquote)
+blockquote {
+  border-left-color: #33856E;
+}
+
+// Заголовок страницы (pageTitle)
+.page-title a {
+  color: #33856E;
+  transition: color 0.2s ease;
+}
+
+.page-title a:hover {
+  color: lighten(#33856E, 15%); // Более яркий зелёный при наведении
+}
+
+// Хлебные крошки (breadcrumbs)
+.breadcrumb-element a {
+  color: #33856E;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-element a:hover {
+  color: lighten(#33856E, 15%);
+}
+
+// Названия папок в проводнике (explorer)
+.folder-container div > a {
+  color: #33856E;
+  transition: color 0.2s ease;
+}
+
+.folder-container div > a:hover {
+  color: lighten(#33856E, 15%);
+}
+
+// Активная вкладка в проводнике (explorer)
+.explorer a.active {
+  color: lighten(#33856E, 15%);
+}
+
+// Выделение вкладок в проводнике при наведении (explorer)
+.explorer-content a:hover {
+  color: lighten(#33856E, 30%);
+}
+
+// Ссылки в тексте заметок (тёмная и светлая темы)
+
+// --- Тёмная тема (по умолчанию) ---
+[saved-theme="dark"] {
+  .markdown-preview-view a,
+  .note-content a,
+  article a {
+    color: lighten(#33856E, 30%);            // светлый зелёный текст
+    background-color: rgba(#4CAF8E, 0.15);   // мягкая зелёная заливка
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 4px;
+    padding: 1px 4px;
+  }
+
+  .markdown-preview-view a:hover,
+  .note-content a:hover,
+  article a:hover {
+    color: lighten(#33856E, 45%);            // ещё светлее при наведении
+    background-color: rgba(#4CAF8E, 0.25);   // заливка чуть плотнее
+  }
+}
+
+// --- Светлая тема ---
+[saved-theme="light"] {
+  .markdown-preview-view a,
+  .note-content a,
+  article a {
+    color: #33856E;                          // основной тёмно-зелёный
+    background-color: rgba(#4CAF8E, 0.15);   // мягкая зелёная заливка
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 4px;
+    padding: 1px 4px;
+  }
+
+  .markdown-preview-view a:hover,
+  .note-content a:hover,
+  article a:hover {
+    color: darken(#33856E, 10%);      // темнее при наведении для контраста
+    background-color: rgba(#4CAF8E, 0.25);
+  }
+}
+
+// Раздел обратные ссылки
+.backlink a,
+a.backlink {
+  color: #33856E;
+}
+.backlink a:hover,
+a.backlink:hover {
+  color: lighten(#33856E, 15%);
+}
+
+// Оглавление (Table of Contents) — тёмная и светлая темы
+
+// --- Тёмная тема ---
+[saved-theme="dark"] {
+ 
+  .toc a:hover,
+  .toc-content a:hover,
+  .toc ul li a:hover {
+    color: lighten(#33856E, 30%);  // светлее при наведении
+  }
+
+  .toc a.active,
+  .toc-content a.active,
+  .toc ul li a.active,
+  .toc a.in-view {
+    color: lighten(#33856E, 15%);  // базовый для активного пункта
+  }
+}
+
+// --- Светлая тема ---
+[saved-theme="light"] {
+ 
+  .toc a:hover,
+  .toc-content a:hover,
+  .toc ul li a:hover {
+    color: darken(#33856E, 15%);   // темнее при наведении
+  }
+
+  .toc a.active,
+  .toc-content a.active,
+  .toc ul li a.active,
+  .toc a.in-view {
+    color: #33856E;   // базовый для активного пункта
+  }
+}
+
+// Обратные ссылки
+
+.backlinks > ul > li > a {
+  color: #33856E;
+  background-color: transparent;
+  transition: color 0.2s ease;
+}
+
+.backlinks > ul > li > a:hover {
+  color: lighten(#33856E, 15%);
+}
+
+
+// Ссылки в навигационных разделов папок
+
+.section .desc a.internal,
+.section .desc h3 a.internal {
+  color: #33856E;
+  transition: color 0.2s ease;
+}
+
+.section .desc a.internal:hover,
+.section .desc h3 a.internal:hover {
+  color: lighten(#33856E, 15%);
+}
+
+// Цвет ссылок в футере
+footer a,
+.footer a,
+.footer-links a,
+footer .links a {
+  color: #33856E;
+  transition: color 0.2s ease;
+}
+
+footer a:hover,
+.footer a:hover,
+.footer-links a:hover,
+footer .links a:hover {
+  color: lighten(#33856E, 15%);
+}
+
+// ============================================================================
+// Таблицы с картинками без границ
+// ============================================================================
+.table-container table.no-border,
+.table-container table.no-border thead,
+.table-container table.no-border tbody,
+.table-container table.no-border tr,
+.table-container table.no-border th,
+.table-container table.no-border td {
+  border: none !important;
+  border-bottom: none !important;
+}
+
+// ============================================================================
+// Цвет выделения текста
+// ============================================================================
+
+.text-highlight {
+  background-color: rgba(lighten(#33856E, 30%), 0.15); // Изменяем цвет, а затем делаем прозрачным на 85%
+}
