@@ -210,22 +210,14 @@ plugins:
       priority: 10
   - source: "@quartz-community/footer"
     enabled: false 
-  - source: github:semsig13-tech/TDOC-footer
+  - source: github:jace/quartz5-plugin-footer
     enabled: true
-    layout:
-      position: footer
-      priority: 50
     options:
-      showCopyright: true
-      copyrightStartYear: 2026
-      copyrightText: "Таврида Электрик"
+      attribution: Таврида Электрик
       links:
-        - label: "tavrida.ru"
-          href: "https://www.tavrida.ru/ter/"
-        - label: "VK"
-          href: "https://vk.ru/tavrida_electric"
-        - label: "MAX"
-          href: "https://max.ru/id7714418269_biz"
+        tavrida.ru: https://www.tavrida.ru/ter/
+        VK: https://vk.ru/tavrida_electric
+        MAX: https://max.ru/id7714418269_biz
   - source: "@quartz-community/recent-notes"
     enabled: false
   - source: "@quartz-community/spacer"
