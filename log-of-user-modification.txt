@@ -1,0 +1,81 @@
+1. Изменен заголовок страницы в https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz.config.yaml
+pageTitle: TDOC
+
+2. Изменены шрифты в https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz.config.yaml
+theme:
+    fontOrigin: googleFonts
+    cdnCaching: true
+    typography:
+      header: Source Sans Pro
+      body: Source Sans Pro
+      code: IBM Plex Mono
+- source: "@quartz-community/quartz-fonts"
+    enabled: true
+    options:
+      title: "Source Sans Pro"
+      header: "Source Sans Pro"
+      body: "Source Sans Pro"
+      code: "IBM Plex Mono"
+
+3. Отключен плагин графов в https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz.config.yaml
+ - source: "@quartz-community/graph"
+    enabled: false
+    layout:
+      position: right
+      priority: 10
+
+4. Добавлен плагин https://github.com/vazome/quartz-image-zoom для увеличения картинок. 15.09.2026
+добавлен в https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz.config.yaml через 
+  - source: github:vazome/quartz-image-zoom
+    enabled: true 
+
+5. https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/styles/custom.scss - добавлены все линии таблиц и их центрирование. 15.09.2026
+
+6. https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz.config.yaml - изменены ссылки в футере. 16.09.2026
+- source: "@quartz-community/footer"
+    enabled: true
+    options:
+      links:
+        tavrida.ru: https://www.tavrida.ru/ter/
+        VK: https://vk.ru/tavrida_electric
+        MAX: https://max.ru/id7714418269_biz
+
+7. https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/styles/custom.scss - изменена цветовая гамма (цвета ссылок). 16.09.2026
+
+8. Добалено правило, которое скрывает границы у таблиц с рисунками. 16.09.2026
+   Создан файл: https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/components/scripts/figureTable.inline.ts
+   Внесены изменения в файл для подключения figureTable.inline.ts: https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/components/Head.tsx
+   В документ: https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/styles/custom.scss внесены правила по оформлению таблиц с рисунками и подписью Рис.
+
+9. Изменена иконка сайта https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/static/icon.png 16.09.2026
+   Для изменения требуется удалить старую и загрузить новую картинку (размер 200х200 или 512х512 пикселей с именем icon.png)
+
+10. https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/styles/custom.scss - изменена цветовая гамма (цыет выделенного текста). 07.10.2026
+
+11. Изменен футер. 08.10.2026
+https://github.com/semsig13-tech/TDOC/blob/v5/quartz/i18n/locales/ru-RU.ts - изменен текст футера в локали с динамическим отображением года
+ footer: {
+      createdWith: "© ${new Date().getFullYear()} Таврида Электрик",
+    },
+https://github.com/semsig13-tech/TDOC/blob/v5/quartz.config.yaml - отключен дефолтный футер и подключен кастомный
+ - source: "@quartz-community/footer"
+    enabled: false
+  - source: "custom/footer"
+    enabled: true
+    layout:
+      position: footer
+      priority: 50
+https://github.com/semsig13-tech/TDOC/blob/v5/quartz/components/Footer.tsx - создан кастомный футер
+https://github.com/semsig13-tech/TDOC/blob/v5/quartz/components/index.ts - зарегистрирован новый футер
+import Footer from "./Footer"
+import { componentRegistry } from "./registry"
+
+componentRegistry.register("Footer", Footer, "local")
+componentRegistry.register("footer", Footer, "local")
+componentRegistry.register("custom/footer", Footer, "local")
+
+
+
+
+ Планируется создание и интеграция плагина для конвертации в word/pdf
+ Планируется интеграция ИИ-асистента
