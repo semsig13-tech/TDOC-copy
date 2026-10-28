@@ -52,7 +52,7 @@ theme:
 
 10. https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/styles/custom.scss - изменена цветовая гамма (цыет выделенного текста). 07.10.2026
 
-11. Изменен футер. 08.10.2026
+11. Изменен футер. 08.10.2026 - устарело
 https://github.com/semsig13-tech/TDOC/blob/v5/quartz/i18n/locales/ru-RU.ts - изменен текст футера в локали с динамическим отображением года
  footer: {
       createdWith: "© ${new Date().getFullYear()} Таврида Электрик",
@@ -69,10 +69,21 @@ https://github.com/semsig13-tech/TDOC/blob/v5/quartz/components/Footer.tsx - с�
 https://github.com/semsig13-tech/TDOC/blob/v5/quartz/components/index.ts - зарегистрирован новый футер
 import Footer from "./Footer"
 import { componentRegistry } from "./registry"
-
 componentRegistry.register("Footer", Footer, "local")
 componentRegistry.register("footer", Footer, "local")
 componentRegistry.register("custom/footer", Footer, "local")
+
+12. Добавлен новый плагин футера https://github.com/jace/quartz5-plugin-footer 26.10.2026
+
+- source: github:jace/quartz5-plugin-footer
+    enabled: true
+    options:
+      attribution: Таврида Электрик
+      links:
+        tavrida.ru: https://www.tavrida.ru/ter/
+        VK: https://vk.ru/tavrida_electric
+        MAX: https://max.ru/id7714418269_biz
+
 
 
 
