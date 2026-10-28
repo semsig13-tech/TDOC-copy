@@ -118,13 +118,11 @@ plugins:
     enabled: false
   - source: "@quartz-community/alias-redirects"
     enabled: true
-#  - source: "@quartz-community/content-index"
-#    enabled: false
-#    options:
-#      enableSiteMap: true
-#      enableRSS: true
-  - source: github:semsig13-tech/custom-content-index
+  - source: "@quartz-community/content-index"
     enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: true
   - source: "@quartz-community/favicon"
     enabled: true
   - source: "@quartz-community/og-image"
