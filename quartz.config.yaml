@@ -125,8 +125,6 @@ plugins:
 #      enableRSS: true
   - source: github:semsig13-tech/custom-content-index
     enabled: true
-      enableSiteMap: true
-      enableRSS: true
   - source: "@quartz-community/favicon"
     enabled: true
   - source: "@quartz-community/og-image"
