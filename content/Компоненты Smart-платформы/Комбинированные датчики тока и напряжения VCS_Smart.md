@@ -2,6 +2,8 @@
 publish: true
 created: 2026-10-22T11:04:27.324Z
 modified: 2026-10-28T12:35:08.620Z
+published: 2026-10-28T12:35:08.620Z
+noteOrder: 3
 ---
 
 # Назначение

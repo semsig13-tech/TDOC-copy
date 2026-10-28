@@ -2,6 +2,8 @@
 publish: true
 created: 2026-10-21T05:27:40.220Z
 modified: 2026-10-28T12:36:29.417Z
+published: 2026-10-28T12:36:29.417Z
+noteOrder: 1
 ---
 
 # Структура меню панели управления (MMI)

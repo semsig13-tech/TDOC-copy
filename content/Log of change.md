@@ -2,6 +2,8 @@
 publish: true
 created: 2026-10-22T08:18:19.727Z
 modified: 2026-10-28T12:36:40.285Z
+published: 2026-10-28T12:36:40.285Z
+noteOrder: 1
 ---
 
 ---
