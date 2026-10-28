@@ -118,9 +118,13 @@ plugins:
     enabled: false
   - source: "@quartz-community/alias-redirects"
     enabled: true
-  - source: "@quartz-community/content-index"
+#  - source: "@quartz-community/content-index"
+#    enabled: false
+#    options:
+#      enableSiteMap: true
+#      enableRSS: true
+  - source: github:semsig13-tech/custom-content-index
     enabled: true
-    options:
       enableSiteMap: true
       enableRSS: true
   - source: "@quartz-community/favicon"
@@ -208,8 +212,8 @@ plugins:
     layout:
       position: afterBody
       priority: 10
-  - source: "@quartz-community/footer"
-    enabled: false 
+#  - source: "@quartz-community/footer"
+#    enabled: false 
   - source: github:jace/quartz5-plugin-footer
     enabled: true
     options:
