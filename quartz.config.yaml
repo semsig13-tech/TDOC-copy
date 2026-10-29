@@ -213,12 +213,21 @@ plugins:
     layout:
       position: afterBody
       priority: 10
-#  - source: "@quartz-community/footer"
-#    enabled: false 
-  - source: github:jace/quartz5-plugin-footer
+  - source: "@quartz-community/footer"
+    enabled: false 
+#  - source: github:jace/quartz5-plugin-footer  # Резервный футер
+#    enabled: false
+#    options:
+#      attribution: Таврида Электрик
+#      links:
+#        tavrida.ru: https://www.tavrida.ru/ter/
+#        VK: https://vk.ru/tavrida_electric
+#        MAX: https://max.ru/id7714418269_biz
+  - source: github:semsig13-tech/custom-footer
     enabled: true
     options:
-      attribution: Таврида Электрик
+      copyrightText: Таврида Электрик
+      copyright: true
       links:
         tavrida.ru: https://www.tavrida.ru/ter/
         VK: https://vk.ru/tavrida_electric
