@@ -73,7 +73,21 @@ componentRegistry.register("Footer", Footer, "local")
 componentRegistry.register("footer", Footer, "local")
 componentRegistry.register("custom/footer", Footer, "local")
 
-12. Добавлен новый плагин футера https://github.com/jace/quartz5-plugin-footer 26.10.2026
+12. Создан и добавлен кастомный плагин футера:  https://github.com/semsig13-tech/custom-footer/tree/main 29.10.2026
+
+Подключен в quartz.config.yaml
+
+  - source: github:semsig13-tech/custom-footer
+    enabled: true
+    options:
+      copyrightText: Таврида Электрик
+      copyright: true
+      links:
+        tavrida.ru: https://www.tavrida.ru/ter/
+        VK: https://vk.ru/tavrida_electric
+        MAX: https://max.ru/id7714418269_biz
+
+Также в quartz.config.yaml закомментирован резервный плагин футера: https://github.com/jace/quartz5-plugin-footer
 
 - source: github:jace/quartz5-plugin-footer
     enabled: true
@@ -84,7 +98,13 @@ componentRegistry.register("custom/footer", Footer, "local")
         VK: https://vk.ru/tavrida_electric
         MAX: https://max.ru/id7714418269_biz
 
+13. Создан и добавлен кастомный плагин проводника с сортировкой по noteOrder и folderOrder в frontmatter: https://github.com/semsig13-tech/custom-explorer/tree/main
 
+  - source: github:semsig13-tech/custom-explorer
+    enabled: true
+    layout:
+      position: left
+      priority: 50
 
 
 
