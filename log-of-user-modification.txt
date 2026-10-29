@@ -99,6 +99,5 @@ componentRegistry.register("custom/footer", Footer, "local")
       priority: 50
 
 
-
  Планируется создание и интеграция плагина для конвертации в word/pdf
  Планируется интеграция ИИ-асистента
