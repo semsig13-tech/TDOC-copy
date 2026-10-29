@@ -216,7 +216,7 @@ plugins:
   - source: "@quartz-community/footer"
     enabled: false 
 #  - source: github:jace/quartz5-plugin-footer  # Резервный футер
-#    enabled: false
+#    enabled: true
 #    options:
 #      attribution: Таврида Электрик
 #      links:
