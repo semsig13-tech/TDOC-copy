@@ -88,7 +88,7 @@ componentRegistry.register("custom/footer", Footer, "local")
         VK: https://vk.ru/tavrida_electric
         MAX: https://max.ru/id7714418269_biz
 
-10. Создан и добавлен кастомный плагин проводника с сортировкой по noteOrder и folderOrder в frontmatter: https://github.com/semsig13-tech/custom-explorer/tree/main
+10. Создан и добавлен кастомный плагин проводника с сортировкой по noteOrder и folderOrder в frontmatter заметок и index.md папок: https://github.com/semsig13-tech/custom-explorer/tree/main
 
 Подключен в https://github.com/semsig13-tech/TDOC/blob/v5/quartz.config.yaml
 
