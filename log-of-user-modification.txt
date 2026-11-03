@@ -42,28 +42,7 @@ theme:
 7. Изменена иконка сайта https://github.com/semsig13-tech/TDOC-FAST/blob/v5/quartz/static/icon.png 16.09.2026
    Для изменения требуется удалить старую и загрузить новую картинку (размер 200х200 или 512х512 пикселей с именем icon.png)
 
-8. Изменен футер. 08.10.2026 - устарело
-https://github.com/semsig13-tech/TDOC/blob/v5/quartz/i18n/locales/ru-RU.ts - изменен текст футера в локали с динамическим отображением года
- footer: {
-      createdWith: "© ${new Date().getFullYear()} Таврида Электрик",
-    },
-https://github.com/semsig13-tech/TDOC/blob/v5/quartz.config.yaml - отключен дефолтный футер и подключен кастомный
- - source: "@quartz-community/footer"
-    enabled: false
-  - source: "custom/footer"
-    enabled: true
-    layout:
-      position: footer
-      priority: 50
-https://github.com/semsig13-tech/TDOC/blob/v5/quartz/components/Footer.tsx - создан кастомный футер
-https://github.com/semsig13-tech/TDOC/blob/v5/quartz/components/index.ts - зарегистрирован новый футер
-import Footer from "./Footer"
-import { componentRegistry } from "./registry"
-componentRegistry.register("Footer", Footer, "local")
-componentRegistry.register("footer", Footer, "local")
-componentRegistry.register("custom/footer", Footer, "local")
-
-9. Создан и добавлен кастомный плагин футера:  https://github.com/semsig13-tech/custom-footer/tree/main 29.10.2026
+8. Создан и добавлен кастомный плагин футера:  https://github.com/semsig13-tech/custom-footer/tree/main 29.10.2026
 
 Подключен в https://github.com/semsig13-tech/TDOC/blob/v5/quartz.config.yaml
 
@@ -88,7 +67,7 @@ componentRegistry.register("custom/footer", Footer, "local")
         VK: https://vk.ru/tavrida_electric
         MAX: https://max.ru/id7714418269_biz
 
-10. Создан и добавлен кастомный плагин проводника с сортировкой по noteOrder и folderOrder в frontmatter заметок и index.md папок: https://github.com/semsig13-tech/custom-explorer/tree/main
+9. Создан и добавлен кастомный плагин проводника с сортировкой по noteOrder и folderOrder в frontmatter заметок и index.md папок: https://github.com/semsig13-tech/custom-explorer/tree/main
 
 Подключен в https://github.com/semsig13-tech/TDOC/blob/v5/quartz.config.yaml
 
