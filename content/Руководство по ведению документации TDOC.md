@@ -1,8 +1,9 @@
 ---
 publish: true
 created: 2026-11-03T12:53:11.261Z
-modified: 2026-11-03T19:24:40.863Z
-published: 2026-11-03T19:24:40.863Z
+modified: 2026-11-03T19:28:22.677Z
+published: 2026-11-03T19:28:22.677Z
+noteOrder: 3
 ---
 
 # Введение
