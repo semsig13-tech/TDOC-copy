@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - v5
+      - export-integration
 
 permissions:
   contents: read
