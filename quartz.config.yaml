@@ -69,6 +69,19 @@ plugins:
   - source: "@quartz-community/github-flavored-markdown"
     enabled: true
     order: 40
+  # TDOC Export — test integration (only in export-integration branch)
+  - source: github:semsig13-tech/quartz-export#integration-test
+    enabled: true
+    order: 95
+    options:
+      manifestPath: static/tdoc-export-index.json
+      iconPath: static/tdoc-export.svg
+      toolbarSelector: ".search, .darkmode, .readermode"
+      explorerSelector: ".explorer"
+      buttonLabel: "Экспорт"
+      customCss: static/export.css
+      themeXml: themes/export-theme.xml
+      includeDrafts: false
   - source: "@quartz-community/table-of-contents"
     enabled: true
     order: 100
