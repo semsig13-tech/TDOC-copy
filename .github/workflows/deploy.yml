@@ -1,3 +1,4 @@
+# Rebuild integration sandbox against the latest quartz-export branch commit.
 name: Deploy Quartz site to GitHub Pages
 
 on:
