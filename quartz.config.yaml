@@ -70,7 +70,7 @@ plugins:
     enabled: true
     order: 40
   # TDOC Export — test integration (only in export-integration branch)
-  # Rebuild marker: include latest resilient button mounting from quartz-export
+  # Rebuild marker: bundle browser dependencies and include resilient export button
   - source: github:semsig13-tech/quartz-export#integration-test
     enabled: true
     order: 95
