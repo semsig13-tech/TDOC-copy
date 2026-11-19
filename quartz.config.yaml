@@ -70,7 +70,7 @@ plugins:
     enabled: true
     order: 40
   # TDOC Export — test integration (only in export-integration branch)
-  # Rebuild marker: remove mobile export button container border
+  # Rebuild marker: align mobile export spacing and use #33856E plugin accent
   - source: github:semsig13-tech/quartz-export#integration-test
     enabled: true
     order: 95
