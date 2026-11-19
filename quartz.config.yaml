@@ -70,7 +70,7 @@ plugins:
     enabled: true
     order: 40
   # TDOC Export — test integration (only in export-integration branch)
-  # Rebuild marker: mobile icon-only export toolbar applies through 800px
+  # Rebuild marker: remove mobile export button container border
   - source: github:semsig13-tech/quartz-export#integration-test
     enabled: true
     order: 95
