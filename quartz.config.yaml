@@ -70,7 +70,7 @@ plugins:
     enabled: true
     order: 40
   # TDOC Export — test integration (only in export-integration branch)
-  # Rebuild marker: place export row below toolbar and wrap mobile sidebar
+  # Rebuild marker: place export row as second line inside toolbar Flex
   - source: github:semsig13-tech/quartz-export#integration-test
     enabled: true
     order: 95
