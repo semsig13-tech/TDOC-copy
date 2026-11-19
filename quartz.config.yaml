@@ -70,7 +70,7 @@ plugins:
     enabled: true
     order: 40
   # TDOC Export — test integration (only in export-integration branch)
-  # Rebuild marker: align mobile export spacing and use #33856E plugin accent
+  # Rebuild marker: TDOC accent for export form controls and equal mobile toolbar gaps
   - source: github:semsig13-tech/quartz-export#integration-test
     enabled: true
     order: 95
