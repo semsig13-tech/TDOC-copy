@@ -70,7 +70,7 @@ plugins:
     enabled: true
     order: 40
   # TDOC Export — test integration (only in export-integration branch)
-  # Rebuild marker: place full-width export row below complete sidebar toolbar
+  # Rebuild marker: wrap shared toolbar container and place export row after all controls
   - source: github:semsig13-tech/quartz-export#integration-test
     enabled: true
     order: 95
